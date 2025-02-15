@@ -18,6 +18,7 @@ import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
 import AllJobs from "./components/Admin/AllJobs";
 import AdminLogin from "./components/Admin/AdminLogin";
+import FeedbackForm from "./components/Feedback/FeedbackForm";
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
@@ -55,6 +56,8 @@ const App = () => {
           <Route path="/job/me" element={<MyJobs />} />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/jobs" element={<AllJobs />} />
+          <Route path="/feedback/post" element={<FeedbackForm />} />
+          {/* <Route path="/feedback/getAll" element={<AllFeedback />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
